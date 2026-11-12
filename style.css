@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* login */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: white;
+    width: 380px;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h1 {
+    margin-bottom: 15px;
+}
+
+.login-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#loginStatus {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.google-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background: white;
+    color: #3c4043;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.google-btn:hover {
+    background: #f1f3f4;
+}
+
+/* 3D view */
+#threeContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.tile {
+    --c: #EF3022;
+    width: 140px;
+    height: 190px;
+    padding: 8px;
+    border: 2px solid var(--c);
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--c) 18%, #000); 
+    box-shadow: 0 0 6px var(--c), inset 0 0 2px color-mix(in srgb, var(--c) 20%, transparent);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    
+}
+
+.tile .top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.tile img {
+    width: 100%;
+    height: 96px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 3px;
+    background: #222;
+    display: block;
+    pointer-events: none;
+}
+
+.tile .name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    overflow: hidden;
+    padding-top: 6px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.tile .interest {
+    flex-shrink: 0;
+    padding: 2px 0 4px;
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+.tile:hover {
+    box-shadow: 0 0 20px var(--c), 0 0 20px var(--c);
+}
+
+#menu {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+#menu button {
+    margin: 0 4px;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #7fffff;
+    border: 1px solid #3fa;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#menu button:hover {
+    background: rgba(127, 255, 255, 0.25);
+}
+
